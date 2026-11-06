@@ -162,11 +162,13 @@
 
   .portrait { position: relative; justify-self: center; width: min(100%, 440px); isolation: isolate; }
   .portrait .frame {
-    position: relative; border-radius: 48% 52% 46% 54% / 40% 42% 58% 60%; padding: 12px;
+    position: relative; width: fit-content; max-width: 100%; margin: 0 auto;
+    border-radius: 48% 52% 46% 54% / 40% 42% 58% 60%; padding: 12px;
     background: var(--grad); animation: morph 14s ease-in-out infinite; box-shadow: var(--shadow);
   }
   .portrait img {
-    width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: inherit;
+    display: block; width: auto; max-width: 100%; height: auto; max-height: 620px; aspect-ratio: 572 / 1024;
+    object-fit: cover; border-radius: inherit; margin: 0 auto;
     background: var(--surface); transition: transform .8s ease;
   }
   .portrait:hover img { transform: scale(1.04) rotate(-1deg); }
